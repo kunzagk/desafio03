@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Listado from './components/listado.jsx';
 import Formulario from './components/formulario.jsx';
 import Buscador from './components/buscador.jsx';
-import Alert from './components/alert.jsx';
 import { BaseColaboradores } from './assets/js/colaboradores.js';
 
 const App = () => {
   const [colaboradores, setColaboradores] = useState(BaseColaboradores);
-  const [alerta, setAlerta] = useState(null);
 
   const agregarColaborador = (nuevoColaborador) => {
     setColaboradores([...colaboradores, nuevoColaborador]);
@@ -30,20 +29,14 @@ const App = () => {
     setColaboradores(colaboradoresFiltrados);
   };
 
-  const mostrarAlerta = (mensaje, tipo) => {
-    setAlerta({ mensaje, tipo });
-    setTimeout(() => {
-      setAlerta(null);
-    }, 3000);
-  };
-
   return (
     <div>
       <h1>Lista de Colaboradores</h1>
-      {alerta && <Alert mensaje={alerta.mensaje} tipo={alerta.tipo} />}
-      <Formulario agregarColaborador={agregarColaborador} mostrarAlerta={mostrarAlerta} />
       <Buscador filtrarColaboradores={filtrarColaboradores} />
-      <Listado colaboradores={colaboradores} eliminarColaborador={eliminarColaborador} />
+      <div className="d-flex justify-content-center">
+        <Listado colaboradores={colaboradores} eliminarColaborador={eliminarColaborador} />
+        <Formulario agregarColaborador={agregarColaborador} />
+      </div>
     </div>
   );
 };

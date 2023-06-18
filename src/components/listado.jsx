@@ -1,11 +1,11 @@
 import React from 'react';
+import Table from "react-bootstrap/Table";
 
 const Listado = ({ colaboradores, eliminarColaborador }) => {
   return (
-    <table className="table">
+    <table className="Table">
       <thead>
         <tr>
-          <th>ID</th>
           <th>Nombre</th>
           <th>Correo</th>
           <th>Edad</th>
@@ -17,7 +17,6 @@ const Listado = ({ colaboradores, eliminarColaborador }) => {
       <tbody>
         {colaboradores.map((colaborador) => (
           <tr key={colaborador.id}>
-            <td>{colaborador.id}</td>
             <td>{colaborador.nombre}</td>
             <td>{colaborador.correo}</td>
             <td>{colaborador.edad}</td>
