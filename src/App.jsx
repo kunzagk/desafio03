@@ -30,15 +30,20 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Lista de Colaboradores</h1>
       <Buscador filtrarColaboradores={filtrarColaboradores} />
-      <div className="d-flex justify-content-center">
-        <Listado colaboradores={colaboradores} eliminarColaborador={eliminarColaborador} />
-        <Formulario agregarColaborador={agregarColaborador} />
+      <div className="row">
+        <div className="col-12 col-lg-6">
+          <Listado colaboradores={colaboradores} eliminarColaborador={eliminarColaborador} />
+        </div>
+        <div className="col-12 col-lg-6">
+          <Formulario agregarColaborador={agregarColaborador} />
+        </div>
       </div>
     </div>
   );
 };
 
 export default App;
+
