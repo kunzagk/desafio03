@@ -1,10 +1,11 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
 const Listado = ({ colaboradores, eliminarColaborador }) => {
   return (
     <div className="table-responsive">
-      <Table vvariant="light">
+      <Table striped bordered hover size="sm">
         <thead>
           <tr>
             <th>Nombre</th>
@@ -24,9 +25,9 @@ const Listado = ({ colaboradores, eliminarColaborador }) => {
               <td>{colaborador.cargo}</td>
               <td>{colaborador.telefono}</td>
               <td>
-                <button onClick={() => eliminarColaborador(colaborador.id)}>
+                <Button variant="danger" onClick={() => eliminarColaborador(colaborador.id)}>
                   Eliminar
-                </button>
+                </Button>
               </td>
             </tr>
           ))}
@@ -37,4 +38,5 @@ const Listado = ({ colaboradores, eliminarColaborador }) => {
 };
 
 export default Listado;
+
 
