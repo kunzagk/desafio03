@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import Alert from "./alert.jsx"
 
-
-const Formulario = ({ agregarColaborador}) => {
+const Formulario = ({ agregarColaborador }) => {
   const [nombre, setNombre] = useState('');
   const [correo, setCorreo] = useState('');
   const [edad, setEdad] = useState('');
@@ -45,9 +44,9 @@ const Formulario = ({ agregarColaborador}) => {
   };
 
   return (
-    <Container  style={{backgroundColor: 'white', borderRadius: '10px', width:'350px'}}>
+    <Container>
       <Row className="justify-content-center">
-        <Col md="auto" >
+        <Col xs={12} md={8} lg={6}>
           <h5 className="text-center">Agregar un colaborador</h5>
           <form onSubmit={agregarColaboradorNuevo}>
             <Form.Group className="mb-3">
