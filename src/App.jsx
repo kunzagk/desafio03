@@ -33,11 +33,11 @@ const App = () => {
     <div className="container">
       <h1>Lista de Colaboradores</h1>
       <Buscador filtrarColaboradores={filtrarColaboradores} />
-      <div className="row">
-        <div className="col-12 col-lg-6">
+      <div className="row mt-3">
+        <div className="col-12 col-lg-8">
           <Listado colaboradores={colaboradores} eliminarColaborador={eliminarColaborador} />
         </div>
-        <div className="col-12 col-lg-6">
+        <div className="col-12 col-lg-4">
           <Formulario agregarColaborador={agregarColaborador} />
         </div>
       </div>

@@ -44,7 +44,7 @@ const Formulario = ({ agregarColaborador }) => {
   };
 
   return (
-    <Container>
+    <Container style={{backgroundColor: 'white', borderRadius: '10px', border: '1px solid blue'}}>
       <Row className="justify-content-center">
         <Col xs={12} md={8} lg={6}>
           <h5 className="text-center">Agregar un colaborador</h5>
