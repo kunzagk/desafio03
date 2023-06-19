@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 const Listado = ({ colaboradores, eliminarColaborador }) => {
   return (
     <div className="table-responsive">
-      <Table striped bordered hover size="sm">
+      <Table striped bordered hover size="sm" className="text-center" >
         <thead>
           <tr>
             <th>Nombre</th>

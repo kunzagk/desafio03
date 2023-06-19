@@ -21,17 +21,14 @@ const App = () => {
 
   const filtrarColaboradores = (busqueda) => {
     const colaboradoresFiltrados = BaseColaboradores.filter((colaborador) =>
-      Object.values(colaborador)
-        .join(' ')
-        .toLowerCase()
-        .includes(busqueda.toLowerCase())
+      Object.values(colaborador).join(' ').toLowerCase().includes(busqueda.toLowerCase())
     );
     setColaboradores(colaboradoresFiltrados);
   };
 
   return (
     <div className="container">
-      <h1>Lista de Colaboradores</h1>
+      <h1 className='text-center'>Lista de Colaboradores</h1>
       <Buscador filtrarColaboradores={filtrarColaboradores} />
       <div className="row mt-3">
         <div className="col-12 col-lg-8">
